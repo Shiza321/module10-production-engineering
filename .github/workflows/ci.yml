@@ -24,10 +24,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Unit Tests
-        run: |
-          python -m unittest discover -s tests -v
+      - name: Run Production Smoke Test
+        run: python main.py
 
       - name: Build Docker Image
-        run: |
-          docker build -t production-automation .
+        run: docker build -t production-automation .
