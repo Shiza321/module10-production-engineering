@@ -27,6 +27,9 @@ jobs:
       - name: Run Security Tests
         run: python -m unittest tests.test_security -v
 
+      - name: Run Performance Tests
+        run: python -m unittest tests.test_performance -v
+
       - name: Run Production Smoke Test
         run: python main.py
 
